@@ -243,7 +243,7 @@
     
     font-weight: 400;
     font-family: 'Poppins';
-    font-size: 14px;
+    font-size: 12px;
     font-feature-settings: 'pnum' on, 'lnum' on;
 	text-align: end;
     color: #2B2B2B;
@@ -254,12 +254,29 @@
     text-overflow: ellipsis; /* adiciona "..." para indicar que o texto foi truncado */
 }
 
-input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="time"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-}
+.input-pagador {
+    background-color: white;
+    border-radius: 0px;
+    border: 0px solid #fff;
+    
+    padding: 10px 0px;
+    
+	height: 43px;
+    width: 400px;
+    box-sizing: border-box;
+    
+    font-weight: 400;
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+	text-align: end;
+    color: #2B2B2B;
+	letter-spacing: 0.12px;
 
+    overflow: hidden; /* esconde qualquer conteúdo que ultrapasse a largura */
+    white-space: nowrap; /* faz com que o texto não quebre para a próxima linha */
+    text-overflow: ellipsis; /* adiciona "..." para indicar que o texto foi truncado */
+}
 
 .botoes {
     display: inline-flex;
@@ -345,36 +362,18 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     padding-bottom: 10px;
 }
 
-.segmented-control {
-    display: flex;
-    overflow: hidden;
-    border-radius: 20px;
-    border: 1px solid #79747E;
-    max-width: 300px; /* Ajuste a largura máxima conforme necessário */
-    height: 40px;
-    align-content: center;
-}
-
-.segmented-control label {
-    display: flex;
-    flex: 1;
-    text-align: center;
-    cursor: pointer;
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-    font-family: 'Poppins';
-    font-weight: 500;
-    color: #1D1B20;
-    align-items: center;
-    justify-content: center;
-}
-
-.segmented-control input[type="radio"] {
-    display: none;
-}
-
-.segmented-control input[type="radio"]:checked + label {
+.input-config {
+    height: 28px;
+    
     background-color: #E8DEF8;
-    color: #1D192B;
+    border-radius: 6px;
+    border: 1px solid #79747E;
+    
     font-weight: 600;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #333;
+    
+    padding: 10px 18px;
 }

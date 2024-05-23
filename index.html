@@ -70,11 +70,11 @@
 						<div class="espaco-titulo">Dados da Transferência</div>
 						<div class="item">
 							<div class="input-titulo">Data</div>
-                    		<input type="date" class="input-dados" max="9999-12-31">
+                    		<input type="text" placeholder="dd/mm/aaaa" class="input-dados" id="input-data" readonly>
 						</div>
 						<div class="item">
 							<div class="input-titulo">Hora</div>
-                    		<input type="time" class="input-dados" max="23:59">
+                    		<input type="text" placeholder="00:00" class="input-dados" id="input-hora" readonly>
 						</div>
 						<div class="item">
 							<div class="input-titulo">Valor</div>
@@ -118,27 +118,27 @@
 						<div class="espaco-titulo">Dados do Pagador</div>
 						<div class="item">
 							<div class="input-titulo">Nome</div>
-                    		<input type="text" class="input-dados" placeholder="Razão Social ou Nome do Cliente">
+                    		<input type="text" class="input-pagador" placeholder="Razão Social ou Nome do Cliente">
 						</div>
 						<div class="item">
 							<div class="input-titulo">CNPJ</div>
-                    		<input type="text" class="input-dados" id="input-cnpj" placeholder="00.000.000/0000-00">
+                    		<input type="text" class="input-pagador" id="input-cnpj" placeholder="00.000.000/0000-00">
 						</div>
 						<div class="item">
 							<div class="input-titulo">Intituição</div>
-                    		<input type="text" class="input-dados" placeholder="Banco do Cliente">
+                    		<input type="text" class="input-pagador" placeholder="Banco do Cliente">
 						</div>
 						<div class="item">
 							<div class="input-titulo">Agência</div>
-                    		<input type="text" class="input-dados" placeholder="0000">
+                    		<input type="text" class="input-pagador" placeholder="0000">
 						</div>
 						<div class="item">
 							<div class="input-titulo">Conta</div>
-                    		<input type="text" class="input-dados" placeholder="0000000-0">
+                    		<input type="text" class="input-pagador" placeholder="0000000-0">
 						</div>
 						<div class="item">
 							<div class="input-titulo">Chave PIX</div>
-                    		<input type="text" class="input-dados" placeholder="Chave PIX" value="Não utilizada" id="input-pix">
+                    		<input type="text" class="input-pagador" placeholder="Chave PIX" value="Não utilizada" id="input-pix">
 						</div>
                     </div>
 							
@@ -153,13 +153,12 @@
         </div>
 		
         <div class="config" class="ocultar-na-impressao">
-			<input type="date" class="input-dados">
 			
-			<md-filled-text-field label="Label" value="Value">
-			</md-filled-text-field>
-
-			<md-outlined-text-field label="Label" value="Value">
-			</md-outlined-text-field>
+			<div class="config-container">
+				<div class="config-titulo">Data e Hora</div>
+				<input type="date" class="input-config" id="data" max="9999-12-31">
+				<input type="time" class="input-config" id="hora" max="23:59">
+			</div>
 			
             <div class="config-container">
                 <div class="config-titulo">Status da Transferência</div>
@@ -184,8 +183,8 @@
     </div>
 	<script src="scripts.js"></script>
 	<script src="autenticacao.js"></script>
+	<script src="data-hora.js"></script>
 	<script src="imprimir.js"></script>
-	<script type="module" src="index.js"></script>
 </body>
     
 </html>
