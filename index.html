@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <title>Tela de Comprovante</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+    <div class="tela">
+        <div class="tela-aprov" id="tela-aprov">
+            <div class="header">
+                <img src="Recursos/LOGO.svg" style="height: 50px; margin-left: 744px;" alt="Logo do Banco">
+                <div class="header-content">
+                    <div class="banco-dados">
+                        <div class="banco-nome">BANCO BS2 S.A.</div>
+                        <div class="banco-cnpj">CNPJ: 71.027.866/0003-04</div>
+                    </div>
+                    <div class="banco-div"></div>
+                    <div class="banco-sair">SAIR</div>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-bg"></div>
+                <div class="menu-nav">
+                    <div class="page-not">
+                        <img src="Recursos/home.svg" alt="Home" style="height: 24px">
+                        <div>Home</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="Recursos/pageview.svg" alt="Consulta" style="height: 24px">
+                        <div>Consulta</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="Recursos/assignment.svg" alt="Cadastros" style="height: 24px">
+                        <div>Cadastros</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="Recursos/savings.svg" alt="Crédito Empresarial" style="height: 24px">
+                        <div>Crédito Empresarial</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="Recursos/priority.svg" alt="Aprovações" style="height: 24px">
+                        <div>Aprovações</div>
+                    </div>
+                    <div class="page-select">
+                        <img src="Recursos/universal_currency_alt.svg" alt="Pagamentos" style="height: 24px">
+                        <div>Pagamentos</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="Recursos/finance.svg" alt="Investimentos" style="height: 24px">
+                        <div>Investimentos</div>
+                    </div>
+                    <div class="page-not">
+                        <img src="Recursos/settings.svg" alt="Configurações" style="height: 24px">
+                        <div>Configurações</div>
+                    </div>
+                </div>
+            </div>
+            <div class="secoes">
+                <div class="secao">
+                    <div class="secao-titulo">Comprovante de Transferência</div>
+                    <div class="secao-div"></div>
+                    
+					<div class="colunas">
+					
+					<div class="espaco1">
+						<div class="espaco-titulo">Dados da Transferência</div>
+						<div class="item">
+							<div class="input-titulo">Data</div>
+                    		<input type="date" class="input-dados" max="9999-12-31">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Hora</div>
+                    		<input type="time" class="input-dados" max="23:59">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Valor</div>
+                   			<input type="text" placeholder="R$ 0.000,00" value="R$ 1.000,00" class="input-dados" id="input-valor">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Autenticação</div>
+                    		<input type="text" placeholder="Autenticação" class="input-dados" id="input-autenticacao" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">Status</div>
+                    		<input type="text" placeholder="Status" class="input-dados" id="input-status">
+						</div>
+                    </div>
+					
+					<div class="espaco2">
+						<div class="espaco-titulo">Dados do Pagador</div>
+						<div class="item">
+							<div class="input-titulo">Nome</div>
+                    		<input type="text" class="input-dados" value="BANCO BS2 S/A" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">CNPJ</div>
+                    		<input type="text" class="input-dados" value="71.027.866/0003-04" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">Intituição</div>
+                    		<input type="text" class="input-dados" value="BANCO BS2 SA" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">Agência</div>
+                    		<input type="text" class="input-dados" value="0001" readonly>
+						</div>
+						<div class="item">
+							<div class="input-titulo">Conta</div>
+                    		<input type="text" class="input-dados" value="07859426-6" readonly>
+						</div>
+                    </div>
+						
+					<div class="espaco3">
+						<div class="espaco-titulo">Dados do Pagador</div>
+						<div class="item">
+							<div class="input-titulo">Nome</div>
+                    		<input type="text" class="input-dados" placeholder="Razão Social ou Nome do Cliente">
+						</div>
+						<div class="item">
+							<div class="input-titulo">CNPJ</div>
+                    		<input type="text" class="input-dados" id="input-cnpj" placeholder="00.000.000/0000-00">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Intituição</div>
+                    		<input type="text" class="input-dados" placeholder="Banco do Cliente">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Agência</div>
+                    		<input type="text" class="input-dados" placeholder="0000">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Conta</div>
+                    		<input type="text" class="input-dados" placeholder="0000000-0">
+						</div>
+						<div class="item">
+							<div class="input-titulo">Chave PIX</div>
+                    		<input type="text" class="input-dados" placeholder="Chave PIX" value="Não utilizada" id="input-pix">
+						</div>
+                    </div>
+							
+					</div>
+					
+                    <div class="botoes">
+                        <img src="Recursos/arrow_back_ios_new.svg" alt="Editar" style="height: 18px;"> Voltar
+                    </div>
+                </div>
+            </div>
+            <div class="final"></div>
+        </div>
+		
+        <div class="config" class="ocultar-na-impressao">
+			<input type="date" class="input-dados">
+			
+			<md-filled-text-field label="Label" value="Value">
+			</md-filled-text-field>
+
+			<md-outlined-text-field label="Label" value="Value">
+			</md-outlined-text-field>
+			
+            <div class="config-container">
+                <div class="config-titulo">Status da Transferência</div>
+                <select id="status" class="input-select">
+                    <option value="Concluída" selected="">Concluída</option>
+					<option value="Efetuada">Efetuada</option>
+                    <option value="Não concluída">Não concluída</option>
+                    <option value="Estornada">Estornada</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+			<div class="config-container">
+                <div class="config-titulo">Chave PIX</div>
+                <select id="pix" class="input-select">
+                    <option value="Não utilizada" selected="">Não utilizada</option>
+                    <option value="Outro">Outro</option>
+                </select>
+            </div>
+            
+            <button id="botao-imprimir">EXPORTAR</button>
+        </div>
+    </div>
+	<script src="scripts.js"></script>
+	<script src="autenticacao.js"></script>
+	<script src="imprimir.js"></script>
+	<script type="module" src="index.js"></script>
+</body>
+    
+</html>
